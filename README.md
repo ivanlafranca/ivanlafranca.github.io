@@ -1,5 +1,9 @@
 # Student Research Assistant at European Central Bank, DG-Research
 
+## Download My CV
+
+[⬇️ Download CV](assets/CV_IvanLaFranca.pdf){: .download-btn }
+
 ## Education
 - MRes Economics | Universitat Autonoma de Barcelona
 - BA Economics and Management | University of Milan
