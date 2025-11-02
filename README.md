@@ -1,19 +1,19 @@
-# Student Research Assistant at European Central Bank DG-Research
+# Student Research Assistant at European Central Bank, DG-Research
 
-### Education
-MRes Economics, Universitat Autonoma de Barcelona
+## Education
+- MRes Economics | Universitat Autonoma de Barcelona
+- BA Economics and Management | University of Milan
 
-BA Economics and Management, University of Milan
+
+## Work Experience
+
+**European Central Bank @ Student Research Assistant, DG-Research, Monetary Policy Research (_July 2025 - Present)**
 
 
-### Work Experience
+**lavoce.info @ Research Assistant (_October 2022 - _March 2023)**
 
-ECB
+**University of Milan @ Research Assistant to Professor Antonio Filippin (_October 2022 - _June 2023)**
 
-lavoce.info
+## Work In Progress
 
-University of Milan
-
-### Work In Progress
-
-Peer Effects in university enrollment decisions
+Peer Effects in university enrollment decisions, with Pedro Luis Silva
