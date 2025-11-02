@@ -17,7 +17,7 @@ theme: jekyll-theme-minimal
 # To keep the picture but remove the automatic "View my GitHub profile" link:
 # Do NOT use the 'logo:' field.
 # Instead, manually insert the image in your README.md or index.md:
-# ![Ivan La Franca](assets/pic_LaFranca_a.jpg)
+# ![Ivan La Franca](pic_LaFranca_a.jpg)
 
 # -----------------------------
 # Custom CSS
