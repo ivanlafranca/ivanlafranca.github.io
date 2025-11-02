@@ -1,4 +1,4 @@
-# Economist
+# Student Research Assistant at European Central Bank DG-Research
 
 ### Education
 MRes Economics, Universitat Autonoma de Barcelona
