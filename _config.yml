@@ -4,7 +4,7 @@ logo: pic_LaFranca_a.jpg
 
 description: Student Research assistant at ECB, DG-Research
 
-#show_downloads: true
+# show_downloads: false
 
 theme: chulapa-jekyll
 
