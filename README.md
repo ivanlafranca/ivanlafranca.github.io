@@ -2,7 +2,7 @@
 
 ## Download My CV
 
-[⬇️ Download CV](assets/CV_IvanLaFranca.pdf){: .download-btn }
+[⬇️ Download CV](CV_IvanLaFranca.pdf){: .download-btn }
 
 ## Education
 - MRes Economics | Universitat Autonoma de Barcelona
