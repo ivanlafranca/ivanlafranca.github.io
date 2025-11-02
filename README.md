@@ -1,4 +1,4 @@
-# Student Research Assistant at European Central Bank, DG-Research
+# Ciao!
 
 [Download my CV](CV_IvanLaFranca.pdf)
 
