@@ -1,22 +1,8 @@
-# Site Metadata
 title: Ivan La Franca
-description: Student Research Assistant at ECB
 
-# Leave baseurl empty for user pages (username.github.io)
-baseurl: ""
-url: "https://ivanlafranca.github.io"
-
-# Theme
+logo: pic_LaFranca_a.jpg
+description: Student Research assistant at ECB, DG-Research
+show_downloads: true
 theme: jekyll-theme-minimal
 
-# Use a custom CSS file (placed at assets/css/style.css)
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      css: "assets/css/style.css"
-
-# Options
-show_downloads: true
 
