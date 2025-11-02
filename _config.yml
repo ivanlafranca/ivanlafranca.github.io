@@ -1,6 +1,37 @@
+# -----------------------------
+# Site Metadata
+# -----------------------------
 title: Ivan La Franca
-logo: pic_LaFranca_a.jpg
-#description: Forza Palermo
-#show_downloads: true
+description: Student Research Assistant & Programmer
+baseurl: "" # leave empty for user pages
+url: "https://ivanlafranca.github.io" # your GitHub Pages URL
+
+# -----------------------------
+# Theme
+# -----------------------------
 theme: jekyll-theme-minimal
+
+# -----------------------------
+# Logo & Profile Link
+# -----------------------------
+# To keep the picture but remove the automatic "View my GitHub profile" link:
+# Do NOT use the 'logo:' field.
+# Instead, manually insert the image in your README.md or index.md:
+# ![Ivan La Franca](assets/pic_LaFranca_a.jpg)
+
+# -----------------------------
+# Custom CSS
+# -----------------------------
+# Link to a CSS file that hides the GitHub profile link and styles your page
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      css: "assets/css/style.css"
+
+# -----------------------------
+# Options
+# -----------------------------
+show_downloads: true  # Enables your CV download button
 
