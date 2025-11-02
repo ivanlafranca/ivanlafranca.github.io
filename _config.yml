@@ -1,8 +1,11 @@
 title: Ivan La Franca
 
 logo: pic_LaFranca_a.jpg
+
 description: Student Research assistant at ECB, DG-Research
-show_downloads: true
-theme: jekyll-theme-minimal
+
+#show_downloads: true
+
+theme: chulapa-jekyll
 
 
