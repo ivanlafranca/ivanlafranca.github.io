@@ -7,12 +7,9 @@
 
 ## Work Experience
 
-**European Central Bank @ Student Research Assistant, DG-Research, Monetary Policy Research (_July 2025 - Present)**
-
-
-**lavoce.info @ Research Assistant (_October 2022 - _March 2023)**
-
-**University of Milan @ Research Assistant to Professor Antonio Filippin (_October 2022 - _June 2023)**
+- European Central Bank @ Student Research Assistant, DG-Research, Monetary Policy Research (July 2025 - Present)
+- University of Milan @ Research Assistant to Professor Antonio Filippin (October 2022 - June 2023)
+- lavoce.info @ Research Assistant (October 2022 - March 2023)
 
 ## Work In Progress
 
