@@ -16,3 +16,8 @@
 ## Work In Progress
 
 Peer Effects in university enrollment decisions, with Pedro Luis Silva
+
+
+## Other Projects
+
+[The Artist, the Track and the Lyrics: Predicting Music Success](Data_Project.pdf)
