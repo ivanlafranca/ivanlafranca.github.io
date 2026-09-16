@@ -49,13 +49,13 @@
   a{ color:var(--accent); text-decoration:underline; text-underline-offset:2px; text-decoration-color:var(--line); }
   a:hover{ text-decoration-color:var(--accent); }
 
-  header{ display:flex; align-items:center; gap:18px; margin-bottom:8px; }
+  header{ display:flex; align-items:center; gap:24px; margin-bottom:8px; }
   .avatar{
-    width:58px; height:58px; border-radius:50%;
+    width:112px; height:112px; border-radius:50%;
     object-fit:cover; flex:none;
   }
-  h1{ font-size:1.25rem; font-weight:600; margin:0; }
-  .affiliation{ margin:4px 0 0; color:var(--ink-soft); font-size:0.92rem; }
+  h1{ font-size:1.35rem; font-weight:600; margin:0; }
+  .affiliation{ margin:6px 0 0; color:var(--ink-soft); font-size:0.92rem; }
 
   .links{ margin:22px 0 0; font-size:0.9rem; }
   .links a{ margin-right:16px; }
@@ -75,19 +75,24 @@
   .entry-title a:hover{ color:var(--accent); }
   .entry-meta{ color:var(--ink-soft); font-size:0.82rem; margin-top:2px; }
 
-  footer{
-    max-width:640px; margin:0 auto; padding:0 20px 48px;
-    color:var(--ink-soft); font-size:0.8rem;
-  }
-
   @media (max-width:480px){
     body{ font-size:14.5px; }
-    header{ gap:14px; }
-    .avatar{ width:48px; height:48px; }
+    header{ gap:16px; }
+    .avatar{ width:84px; height:84px; }
   }
+
+  .theme-toggle{
+    position:fixed; top:20px; right:20px;
+    background:none; border:1px solid var(--line); border-radius:6px;
+    color:var(--ink-soft); font-family:inherit; font-size:0.78rem;
+    padding:5px 10px; cursor:pointer;
+  }
+  .theme-toggle:hover{ color:var(--ink); border-color:var(--ink-soft); }
 </style>
 </head>
 <body>
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">theme</button>
+
 <main>
   <header>
     <img class="avatar" src="pic_LaFranca_a.jpg" alt="Ivan La Franca">
@@ -97,7 +102,7 @@
     </div>
   </header>
   <p class="links">
-    <a href="mailto:REPLACE_WITH_EMAIL">email</a><a href="cv.pdf">cv</a><a href="https://github.com/ivanlafranca">github</a><a href="https://scholar.google.com/">scholar</a>
+    <a href="mailto:ivan.lafranca@bse.eu">ivan.lafranca@bse.eu</a><a href="cv.pdf">cv</a><a href="https://www.linkedin.com/in/REPLACE_WITH_LINKEDIN">linkedin</a>
   </p>
 
   <section id="education">
@@ -153,10 +158,25 @@
   </section>
 </main>
 
-<footer>Barcelona</footer>
-</body>
-</html>
+<script>
+  (function(){
+    var btn = document.getElementById('themeToggle');
+    var root = document.documentElement;
+    var stored = null;
+    try { stored = localStorage.getItem('theme'); } catch(e) {}
+    if (stored === 'light' || stored === 'dark') root.setAttribute('data-theme', stored);
 
-<footer>Barcelona</footer>
+    function current(){
+      var attr = root.getAttribute('data-theme');
+      if (attr) return attr;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    btn.addEventListener('click', function(){
+      var next = current() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch(e) {}
+    });
+  })();
+</script>
 </body>
 </html>
