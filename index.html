@@ -6,32 +6,32 @@
 <meta name="description" content="Ivan La Franca — PhD Candidate in Economics at UAB / Barcelona School of Economics.">
 <title>Ivan La Franca</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
   :root{
-    --bg:#fbfaf8;
-    --ink:#1c1b19;
-    --ink-soft:#5a564f;
-    --line:#dedad2;
-    --accent:#2c4870;
+    --bg:#ffffff;
+    --ink:#1a1a1a;
+    --ink-soft:#6b6b6b;
+    --line:#e6e6e6;
+    --accent:#2563eb;
     color-scheme: light;
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --bg:#171614;
-      --ink:#ece9e3;
-      --ink-soft:#a29c90;
-      --line:#332f2a;
-      --accent:#8aa9d6;
+      --bg:#111214;
+      --ink:#e8e8e8;
+      --ink-soft:#9a9a9a;
+      --line:#2a2b2e;
+      --accent:#6ea8fe;
       color-scheme: dark;
     }
   }
   :root[data-theme="dark"]{
-    --bg:#171614;
-    --ink:#ece9e3;
-    --ink-soft:#a29c90;
-    --line:#332f2a;
-    --accent:#8aa9d6;
+    --bg:#111214;
+    --ink:#e8e8e8;
+    --ink-soft:#9a9a9a;
+    --line:#2a2b2e;
+    --accent:#6ea8fe;
     color-scheme: dark;
   }
 
@@ -41,88 +41,83 @@
     margin:0;
     background:var(--bg);
     color:var(--ink);
-    font-family:'Crimson Pro', Georgia, 'Times New Roman', serif;
-    font-size:19px;
-    line-height:1.6;
+    font-family:'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+    font-size:15.5px;
+    line-height:1.7;
   }
-  main{
-    max-width:640px;
-    margin:0 auto;
-    padding:64px 24px 80px;
-  }
-  a{ color:var(--accent); text-decoration-thickness:1px; text-underline-offset:2px; }
-  a:hover{ text-decoration:none; }
+  main{ max-width:640px; margin:0 auto; padding:64px 20px 80px; }
+  a{ color:var(--accent); text-decoration:underline; text-underline-offset:2px; text-decoration-color:var(--line); }
+  a:hover{ text-decoration-color:var(--accent); }
 
-  header h1{
-    font-size:2.1rem;
-    font-weight:600;
-    margin:0 0 6px;
-    letter-spacing:-0.01em;
+  header{ display:flex; align-items:center; gap:18px; margin-bottom:8px; }
+  .avatar{
+    width:58px; height:58px; border-radius:50%;
+    object-fit:cover; flex:none;
   }
-  .affiliation{
-    margin:0 0 18px;
-    color:var(--ink-soft);
-    font-size:1.05rem;
-    line-height:1.5;
-  }
-  .links{
-    margin:0 0 8px;
-    font-size:1rem;
-  }
-  .links a{ margin-right:2px; }
-  .sep{ color:var(--line); padding:0 8px; }
+  h1{ font-size:1.25rem; font-weight:600; margin:0; }
+  .affiliation{ margin:4px 0 0; color:var(--ink-soft); font-size:0.92rem; }
 
-  section{ margin-top:52px; }
+  .links{ margin:22px 0 0; font-size:0.9rem; }
+  .links a{ margin-right:16px; }
+
+  section{ margin-top:44px; }
   h2{
-    font-size:0.82rem;
-    font-weight:600;
-    text-transform:uppercase;
-    letter-spacing:.11em;
+    font-size:0.82rem; font-weight:500;
     color:var(--ink-soft);
     margin:0 0 16px;
-    padding-bottom:8px;
-    border-bottom:1px solid var(--line);
   }
+  h2::before{ content:"# "; color:var(--line); }
 
-  .entry{ margin-bottom:18px; }
+  .entry{ margin-bottom:16px; }
   .entry:last-child{ margin-bottom:0; }
-  .entry-title{ font-size:1.06rem; }
-  .entry-title a{ color:var(--ink); text-decoration-color:var(--line); }
-  .entry-title a:hover{ color:var(--accent); text-decoration-color:var(--accent); }
-  .entry-meta{
-    color:var(--ink-soft);
-    font-size:0.94rem;
-    font-style:italic;
-    margin-top:2px;
-  }
+  .entry-title{ font-size:0.95rem; }
+  .entry-title a{ color:var(--ink); }
+  .entry-title a:hover{ color:var(--accent); }
+  .entry-meta{ color:var(--ink-soft); font-size:0.82rem; margin-top:2px; }
 
   footer{
-    max-width:640px;
-    margin:0 auto;
-    padding:0 24px 48px;
-    color:var(--ink-soft);
-    font-size:0.88rem;
+    max-width:640px; margin:0 auto; padding:0 20px 48px;
+    color:var(--ink-soft); font-size:0.8rem;
   }
 
   @media (max-width:480px){
-    body{ font-size:17px; }
-    header h1{ font-size:1.8rem; }
+    body{ font-size:14.5px; }
+    header{ gap:14px; }
+    .avatar{ width:48px; height:48px; }
   }
 </style>
 </head>
 <body>
 <main>
   <header>
-    <h1>Ivan La Franca</h1>
-    <p class="affiliation">PhD Candidate in Economics<br>Universitat Aut&ograve;noma de Barcelona &amp; Barcelona School of Economics</p>
-    <p class="links">
-      <a href="mailto:REPLACE_WITH_EMAIL">Email</a><span class="sep">&middot;</span><a href="cv.pdf">CV</a><span class="sep">&middot;</span><a href="https://github.com/ivanlafrancab">GitHub</a><span class="sep">&middot;</span><a href="https://scholar.google.com/">Google Scholar</a>
-    </p>
+    <img class="avatar" src="pic_LaFranca_a.jpg" alt="Ivan La Franca">
+    <div>
+      <h1>Ivan La Franca</h1>
+      <p class="affiliation">PhD Candidate in Economics &middot; UAB &amp; Barcelona School of Economics</p>
+    </div>
   </header>
+  <p class="links">
+    <a href="mailto:REPLACE_WITH_EMAIL">email</a><a href="cv.pdf">cv</a><a href="https://github.com/ivanlafranca">github</a><a href="https://scholar.google.com/">scholar</a>
+  </p>
 
+  <section id="education">
+    <h2>education</h2>
+    <div class="entry">
+      <p class="entry-title">PhD in Economics</p>
+      <p class="entry-meta">UAB &amp; Barcelona School of Economics &middot; 2026 &ndash; present</p>
+    </div>
+    <div class="entry">
+      <p class="entry-title">MRes Economics</p>
+      <p class="entry-meta">Universitat Aut&ograve;noma de Barcelona &middot; 2023 &ndash; 2025</p>
+    </div>
+    <div class="entry">
+      <p class="entry-title">BA Economics and Management, <em>cum laude</em></p>
+      <p class="entry-meta">University of Milan &middot; 2020 &ndash; 2023</p>
+    </div>
+  </section>
 
   <section id="teaching">
-    <h2>Teaching</h2>
+    <h2>teaching</h2>
     <div class="entry">
       <p class="entry-title">Macroeconomics III &mdash; Main Lecturer</p>
       <p class="entry-meta">BA in Economics, UAB &middot; 2026</p>
@@ -142,10 +137,10 @@
   </section>
 
   <section id="experience">
-    <h2>Work Experience</h2>
+    <h2>work_experience</h2>
     <div class="entry">
       <p class="entry-title">Student Research Assistant, European Central Bank</p>
-      <p class="entry-meta">DG Research &ndash; Monetary Policy, Frankfurt &middot; 2025 &ndash; Present</p>
+      <p class="entry-meta">DG Research &ndash; Monetary Policy, Frankfurt &middot; 2025 &ndash; present</p>
     </div>
     <div class="entry">
       <p class="entry-title">Research Assistant, Prof. Antonio Filippin</p>
@@ -157,6 +152,10 @@
     </div>
   </section>
 </main>
+
+<footer>Barcelona</footer>
+</body>
+</html>
 
 <footer>Barcelona</footer>
 </body>
