@@ -7,6 +7,12 @@
 - MRes in Economics | Universitat Autonoma de Barcelona (2023 - 2025)
 - BA in Economics and Management | University of Milan (2020 - 2023)
 
+## Teaching Experience
+
+- Macroeconomics III, main lecturer | BA in Economics, UAB  (2026)
+- Advanced Macroeconomics, TA | PhD in Economics UAB (2026)
+- Firm dynamics & Macro Labor, TA | PhD in Economics UAB (2026)
+- Macroeconomics I, TA | Master in Public Policy, BSE (2026)
 
 ## Work Experience
 
