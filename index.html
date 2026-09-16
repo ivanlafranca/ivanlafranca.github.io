@@ -3,50 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Ivan La Franca — PhD Candidate in Economics at UAB / Barcelona School of Economics. Research on monetary policy transmission, firm financing, and creative destruction.">
+<meta name="description" content="Ivan La Franca — PhD Candidate in Economics at UAB / Barcelona School of Economics.">
 <title>Ivan La Franca</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
   :root{
-    --bg:#f2f3ee;
-    --surface:#ffffff;
-    --ink:#14171c;
-    --ink-soft:#565b60;
-    --ink-faint:#8b9095;
-    --accent:#1f6f5c;
-    --accent-strong:#154e41;
-    --accent-soft:#e5efe9;
-    --line:#dcdfd6;
-    --shadow:rgba(20,23,28,0.07);
+    --bg:#fbfaf8;
+    --ink:#1c1b19;
+    --ink-soft:#5a564f;
+    --line:#dedad2;
+    --accent:#2c4870;
     color-scheme: light;
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --bg:#11151a;
-      --surface:#171b21;
-      --ink:#edeeea;
-      --ink-soft:#a3a8ac;
-      --ink-faint:#686d72;
-      --accent:#54d8ac;
-      --accent-strong:#8be8c8;
-      --accent-soft:#1b2a25;
-      --line:#262b31;
-      --shadow:rgba(0,0,0,0.4);
+      --bg:#171614;
+      --ink:#ece9e3;
+      --ink-soft:#a29c90;
+      --line:#332f2a;
+      --accent:#8aa9d6;
       color-scheme: dark;
     }
   }
   :root[data-theme="dark"]{
-    --bg:#11151a;
-    --surface:#171b21;
-    --ink:#edeeea;
-    --ink-soft:#a3a8ac;
-    --ink-faint:#686d72;
-    --accent:#54d8ac;
-    --accent-strong:#8be8c8;
-    --accent-soft:#1b2a25;
-    --line:#262b31;
-    --shadow:rgba(0,0,0,0.4);
+    --bg:#171614;
+    --ink:#ece9e3;
+    --ink-soft:#a29c90;
+    --line:#332f2a;
+    --accent:#8aa9d6;
     color-scheme: dark;
   }
 
@@ -56,292 +41,134 @@
     margin:0;
     background:var(--bg);
     color:var(--ink);
-    font-family:'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
-    font-size:17px;
+    font-family:'Crimson Pro', Georgia, 'Times New Roman', serif;
+    font-size:19px;
     line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-    transition:background .3s ease, color .3s ease;
   }
-  h1,h2,h3{
-    font-family:'Fraunces', ui-serif, Georgia, serif;
-    font-weight:500;
+  main{
+    max-width:640px;
+    margin:0 auto;
+    padding:64px 24px 80px;
+  }
+  a{ color:var(--accent); text-decoration-thickness:1px; text-underline-offset:2px; }
+  a:hover{ text-decoration:none; }
+
+  header h1{
+    font-size:2.1rem;
+    font-weight:600;
+    margin:0 0 6px;
     letter-spacing:-0.01em;
-    text-wrap:balance;
-    color:var(--ink);
-    margin:0;
   }
-  a{color:inherit;}
-  p{margin:0;}
-  .mono{font-family:'IBM Plex Mono', ui-monospace, monospace;}
-
-  .skip-link{
-    position:absolute; left:-999px; top:0;
-    background:var(--surface); color:var(--ink); padding:.6em 1em;
-    z-index:100;
+  .affiliation{
+    margin:0 0 18px;
+    color:var(--ink-soft);
+    font-size:1.05rem;
+    line-height:1.5;
   }
-  .skip-link:focus{left:1em; top:1em;}
+  .links{
+    margin:0 0 8px;
+    font-size:1rem;
+  }
+  .links a{ margin-right:2px; }
+  .sep{ color:var(--line); padding:0 8px; }
 
-  /* ---- topbar ---- */
-  .topbar{
-    position:sticky; top:env(safe-area-inset-top,0px);
-    z-index:20;
-    background:color-mix(in srgb, var(--bg) 88%, transparent);
-    backdrop-filter:blur(10px);
+  section{ margin-top:52px; }
+  h2{
+    font-size:0.82rem;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:.11em;
+    color:var(--ink-soft);
+    margin:0 0 16px;
+    padding-bottom:8px;
     border-bottom:1px solid var(--line);
   }
-  .topbar-inner{
-    max-width:840px; margin:0 auto;
-    padding:16px 24px;
-    display:flex; align-items:center; justify-content:space-between; gap:16px;
-  }
-  .wordmark{
-    font-family:'Fraunces', serif; font-weight:600; font-size:1.05rem;
-    text-decoration:none; letter-spacing:-0.01em;
-  }
-  .nav{display:flex; gap:22px;}
-  .nav a{
-    text-decoration:none; font-size:.92rem; color:var(--ink-soft);
-    font-family:'IBM Plex Mono', monospace;
-    padding:4px 2px;
-    border-bottom:1px solid transparent;
-    transition:color .15s ease, border-color .15s ease;
-  }
-  .nav a:hover, .nav a:focus-visible{ color:var(--ink); border-color:var(--accent); }
 
-  .theme-toggle{
-    width:34px; height:34px; border-radius:50%;
-    border:1px solid var(--line); background:var(--surface);
-    display:flex; align-items:center; justify-content:center;
-    cursor:pointer; color:var(--ink-soft);
-    transition:border-color .15s ease, color .15s ease, transform .2s ease;
-    flex:none;
-  }
-  .theme-toggle:hover{ color:var(--accent); border-color:var(--accent); }
-  .theme-toggle svg{ width:16px; height:16px; }
-  .theme-toggle .moon{ display:none; }
-  :root[data-theme="dark"] .theme-toggle .sun{ display:none; }
-  :root[data-theme="dark"] .theme-toggle .moon{ display:block; }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]) .theme-toggle .sun{ display:none; }
-    :root:not([data-theme="light"]) .theme-toggle .moon{ display:block; }
+  .entry{ margin-bottom:18px; }
+  .entry:last-child{ margin-bottom:0; }
+  .entry-title{ font-size:1.06rem; }
+  .entry-title a{ color:var(--ink); text-decoration-color:var(--line); }
+  .entry-title a:hover{ color:var(--accent); text-decoration-color:var(--accent); }
+  .entry-meta{
+    color:var(--ink-soft);
+    font-size:0.94rem;
+    font-style:italic;
+    margin-top:2px;
   }
 
-  main{ max-width:840px; margin:0 auto; padding:0 24px; }
-
-  /* ---- hero ---- */
-  .hero{
-    padding:72px 0 56px;
-    display:flex; align-items:flex-end; justify-content:space-between; gap:32px;
-    border-bottom:1px solid var(--line);
-    animation: rise .7s ease both;
-  }
-  @keyframes rise{ from{ opacity:0; transform:translateY(10px);} to{opacity:1; transform:none;} }
-  .hero-text{ max-width:520px; }
-  .eyebrow{
-    font-family:'IBM Plex Mono', monospace; font-size:.82rem;
-    color:var(--accent); text-transform:uppercase; letter-spacing:.08em;
-    margin-bottom:14px;
-  }
-  .hero h1{ font-size:clamp(2.4rem, 6vw, 3.4rem); line-height:1.04; }
-  .affiliation{ margin-top:14px; color:var(--ink-soft); font-size:1.02rem; }
-  .thesis{ margin-top:20px; font-size:1.08rem; color:var(--ink); line-height:1.55; }
-  .hero-links{ margin-top:28px; display:flex; gap:14px; flex-wrap:wrap; }
-  .btn-primary, .btn-ghost{
-    font-family:'IBM Plex Mono', monospace; font-size:.86rem;
-    text-decoration:none; padding:10px 18px; border-radius:999px;
-    display:inline-flex; align-items:center; gap:8px;
-    transition:transform .15s ease, background .15s ease, border-color .15s ease;
-  }
-  .btn-primary{ background:var(--accent); color:#fff; }
-  :root[data-theme="dark"] .btn-primary{ color:#06120d; }
-  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .btn-primary{ color:#06120d; } }
-  .btn-primary:hover{ transform:translateY(-1px); }
-  .btn-ghost{ border:1px solid var(--line); color:var(--ink-soft); }
-  .btn-ghost:hover{ border-color:var(--accent); color:var(--accent); transform:translateY(-1px); }
-
-  .hero-figure{ flex:none; width:190px; opacity:.9; }
-  .hero-figure svg{ width:100%; height:auto; display:block; }
-  @media (max-width:640px){ .hero{ flex-direction:column; align-items:flex-start; } .hero-figure{ width:130px; } }
-
-  /* ---- sections ---- */
-  .section{ padding:56px 0; border-bottom:1px solid var(--line); }
-  .section:last-of-type{ border-bottom:none; }
-  .section-head{ display:flex; align-items:baseline; gap:14px; margin-bottom:26px; }
-  .section-index{ font-family:'IBM Plex Mono', monospace; color:var(--accent); font-size:.86rem; }
-  .section-head h2{ font-size:1.5rem; }
-
-  .lede{ color:var(--ink-soft); max-width:620px; font-size:1.02rem; margin-bottom:30px; }
-
-  .topic-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; }
-  @media (max-width:680px){ .topic-grid{ grid-template-columns:1fr; } }
-  .topic{
-    background:var(--surface); border:1px solid var(--line); border-radius:14px;
-    padding:22px; box-shadow:0 1px 2px var(--shadow);
-  }
-  .topic h3{ font-size:1.02rem; margin-bottom:10px; }
-  .topic p{ color:var(--ink-soft); font-size:.94rem; line-height:1.55; }
-
-  .paper-list, .teaching-list{ display:flex; flex-direction:column; gap:22px; }
-  .paper, .course{
-    background:var(--surface); border:1px solid var(--line); border-radius:14px;
-    padding:24px 26px;
-  }
-  .paper-meta, .course-meta{
-    font-family:'IBM Plex Mono', monospace; font-size:.78rem;
-    color:var(--accent); text-transform:uppercase; letter-spacing:.05em;
-    margin-bottom:10px;
-  }
-  .paper h3, .course h3{ font-size:1.12rem; margin-bottom:8px; }
-  .paper p, .course p{ color:var(--ink-soft); font-size:.96rem; }
-
-  .contact-grid{ display:flex; flex-wrap:wrap; gap:14px; margin-bottom:18px; }
-  .contact-grid a{
-    text-decoration:none; border:1px solid var(--line); border-radius:999px;
-    padding:9px 18px; font-family:'IBM Plex Mono', monospace; font-size:.86rem;
-    color:var(--ink-soft); transition:all .15s ease;
-  }
-  .contact-grid a:hover{ border-color:var(--accent); color:var(--accent); }
-  .office{ color:var(--ink-faint); font-size:.9rem; }
-
-  .footer{
-    max-width:840px; margin:0 auto; padding:32px 24px 60px;
-    display:flex; justify-content:space-between; color:var(--ink-faint);
-    font-family:'IBM Plex Mono', monospace; font-size:.8rem;
+  footer{
+    max-width:640px;
+    margin:0 auto;
+    padding:0 24px 48px;
+    color:var(--ink-soft);
+    font-size:0.88rem;
   }
 
-  @media (prefers-reduced-motion: reduce){
-    .hero{ animation:none; }
+  @media (max-width:480px){
+    body{ font-size:17px; }
+    header h1{ font-size:1.8rem; }
   }
 </style>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+<main>
+  <header>
+    <h1>Ivan La Franca</h1>
+    <p class="affiliation">PhD Candidate in Economics<br>Universitat Aut&ograve;noma de Barcelona &amp; Barcelona School of Economics</p>
+    <p class="links">
+      <a href="mailto:REPLACE_WITH_EMAIL">Email</a><span class="sep">&middot;</span><a href="cv.pdf">CV</a><span class="sep">&middot;</span><a href="https://github.com/ivanlafrancab">GitHub</a><span class="sep">&middot;</span><a href="https://scholar.google.com/">Google Scholar</a>
+    </p>
+  </header>
 
-<header class="topbar">
-  <div class="topbar-inner">
-    <a href="#top" class="wordmark">I. La Franca</a>
-    <nav class="nav" aria-label="Sections">
-      <a href="#research">Research</a>
-      <a href="#papers">Papers</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
-      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M4.3 4.3l1.8 1.8M17.9 17.9l1.8 1.8M2.5 12h2.6M18.9 12h2.6M4.3 19.7l1.8-1.8M17.9 6.1l1.8-1.8"/></svg>
-      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/></svg>
-    </button>
-  </div>
-</header>
-
-<main id="main">
-  <section class="hero" id="top">
-    <div class="hero-text">
-      <p class="eyebrow">PhD Candidate in Economics</p>
-      <h1>Ivan<br>La Franca</h1>
-      <p class="affiliation">UAB &middot; Barcelona School of Economics</p>
-      <p class="thesis">I study how monetary policy travels through heterogeneous firm financing &mdash; venture capital to entrants, bank credit to incumbents &mdash; and what that redirection means for creative destruction and long-run growth.</p>
-      <div class="hero-links">
-        <a class="btn-primary" href="mailto:REPLACE_WITH_EMAIL">Get in touch</a>
-        <a class="btn-ghost" href="cv.pdf">Download CV</a>
-      </div>
+  <section id="publications">
+    <h2>Publications</h2>
+    <div class="entry">
+      <p class="entry-title">Monetary Policy Transmission through Heterogeneous Firm Financing</p>
+      <p class="entry-meta">Working paper &middot; draft available on request</p>
     </div>
-    <div class="hero-figure" aria-hidden="true">
-      <svg viewBox="0 0 200 120" fill="none">
-        <path d="M2 90 C 30 90, 30 50, 55 50 S 80 95, 105 95 S 130 20, 155 20 S 180 60, 198 60" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round"/>
-        <circle cx="198" cy="60" r="4" fill="var(--accent)"/>
-      </svg>
+    <div class="entry">
+      <p class="entry-title"><a href="https://www.suerf.org/publications/suerf-policy-notes-and-briefs/why-do-euro-area-consumers-not-invest-in-stocks/" target="_blank" rel="noopener">Why Do Euro Area Consumers (Not) Invest in Stocks?</a></p>
+      <p class="entry-meta">with D. Georgarakos, G. Kenny &amp; J. Meyer &middot; SUERF Policy Note/Brief</p>
     </div>
   </section>
 
-  <section class="section" id="research">
-    <div class="section-head">
-      <span class="section-index mono">&sect;01</span>
-      <h2>Research</h2>
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <div class="entry">
+      <p class="entry-title">Macroeconomics III &mdash; Main Lecturer</p>
+      <p class="entry-meta">BA in Economics, UAB &middot; 2026</p>
     </div>
-    <p class="lede">My work sits at the intersection of monetary economics and firm dynamics: how policy shocks propagate unevenly across financing channels, and what that means for who gets to innovate.</p>
-    <div class="topic-grid">
-      <div class="topic">
-        <h3>Financing &amp; Transmission</h3>
-        <p>How monetary policy reaches young, VC-financed entrants differently than it reaches bank-financed incumbents &mdash; and the consequences for the pace of creative destruction.</p>
-      </div>
-      <div class="topic">
-        <h3>Firm Dynamics &amp; Growth</h3>
-        <p>Endogenous growth and Hopenhayn-style firm dynamics, with an eye toward structural change and long-run productivity.</p>
-      </div>
-      <div class="topic">
-        <h3>Environmental Macro</h3>
-        <p>A second strand on green preferences and climate in dynamic growth settings, alongside applied replication work in macro-climate models.</p>
-      </div>
+    <div class="entry">
+      <p class="entry-title">Advanced Macroeconomics &mdash; Teaching Assistant</p>
+      <p class="entry-meta">PhD in Economics, UAB &middot; 2026</p>
+    </div>
+    <div class="entry">
+      <p class="entry-title">Firm Dynamics &amp; Macro Labor &mdash; Teaching Assistant</p>
+      <p class="entry-meta">PhD in Economics, UAB &middot; 2026</p>
+    </div>
+    <div class="entry">
+      <p class="entry-title">Macroeconomics I &mdash; Teaching Assistant</p>
+      <p class="entry-meta">Master in Public Policy, BSE &middot; 2026</p>
     </div>
   </section>
 
-  <section class="section" id="papers">
-    <div class="section-head">
-      <span class="section-index mono">&sect;02</span>
-      <h2>Working Papers</h2>
+  <section id="experience">
+    <h2>Work Experience</h2>
+    <div class="entry">
+      <p class="entry-title">Student Research Assistant, European Central Bank</p>
+      <p class="entry-meta">DG Research &ndash; Monetary Policy, Frankfurt &middot; 2025 &ndash; Present</p>
     </div>
-    <div class="paper-list">
-      <article class="paper">
-        <p class="paper-meta">Working Paper &middot; Draft available on request</p>
-        <h3>Monetary Policy Transmission through Heterogeneous Firm Financing</h3>
-        <p>Examines how the transmission of monetary policy differs across venture-capital-backed entrants and bank-financed incumbents, and the resulting effects on creative destruction and long-run growth.</p>
-      </article>
+    <div class="entry">
+      <p class="entry-title">Research Assistant, Prof. Antonio Filippin</p>
+      <p class="entry-meta">University of Milan &middot; 2022 &ndash; 2023</p>
     </div>
-  </section>
-
-  <section class="section" id="teaching">
-    <div class="section-head">
-      <span class="section-index mono">&sect;03</span>
-      <h2>Teaching</h2>
+    <div class="entry">
+      <p class="entry-title">Research Assistant, lavoce.info</p>
+      <p class="entry-meta">Milan &middot; 2022 &ndash; 2023</p>
     </div>
-    <div class="teaching-list">
-      <article class="course">
-        <p class="course-meta">2026 &ndash; present &middot; Substitute Professor</p>
-        <h3>Macroeconomics III</h3>
-        <p>Universitat Aut&ograve;noma de Barcelona</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section" id="contact">
-    <div class="section-head">
-      <span class="section-index mono">&sect;04</span>
-      <h2>Contact</h2>
-    </div>
-    <div class="contact-grid">
-      <a href="mailto:REPLACE_WITH_EMAIL">Email</a>
-      <a href="https://github.com/REPLACE_WITH_USERNAME">GitHub</a>
-      <a href="https://scholar.google.com/">Google Scholar</a>
-      <a href="https://www.linkedin.com/">LinkedIn</a>
-    </div>
-    <p class="office">Office B3-144, UFAE &middot; UAB, Barcelona</p>
   </section>
 </main>
 
-<footer class="footer">
-  <span>Barcelona</span>
-  <span>&copy; 2026</span>
-</footer>
-
-<script>
-  (function(){
-    var btn = document.getElementById('themeToggle');
-    var root = document.documentElement;
-    var stored = null;
-    try { stored = localStorage.getItem('theme'); } catch(e) {}
-    if (stored === 'light' || stored === 'dark') root.setAttribute('data-theme', stored);
-
-    function current(){
-      var attr = root.getAttribute('data-theme');
-      if (attr) return attr;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    btn.addEventListener('click', function(){
-      var next = current() === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      try { localStorage.setItem('theme', next); } catch(e) {}
-    });
-  })();
-</script>
+<footer>Barcelona</footer>
 </body>
 </html>
