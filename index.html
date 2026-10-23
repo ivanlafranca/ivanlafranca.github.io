@@ -1,189 +1,219 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="antialiased">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Ivan La Franca — PhD Candidate in Economics at UAB / BSE.">
-<title>Ivan La Franca</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ivan La Franca — PhD Candidate in Economics at UAB / BSE.">
+    <title>Ivan La Franca</title>
+    
+    <!-- Google Fonts: Lora (Serif) for headings, Inter (Sans-Serif) for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    },
+                    colors: {
+                        darkbg: '#111111',
+                        charcoal: '#222222',
+                    }
+                }
+            }
+        }
+    </script>
 
-  :root{
-    --bg:#ffffff;
-    --ink:#1a1a1a;
-    --ink-soft:#6b6b6b;
-    --line:#e6e6e6;
-    --accent:#2563eb;
-    color-scheme: light;
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg:#111214;
-      --ink:#e8e8e8;
-      --ink-soft:#9a9a9a;
-      --line:#2a2b2e;
-      --accent:#6ea8fe;
-      color-scheme: dark;
-    }
-  }
-  :root[data-theme="dark"]{
-    --bg:#111214;
-    --ink:#e8e8e8;
-    --ink-soft:#9a9a9a;
-    --line:#2a2b2e;
-    --accent:#6ea8fe;
-    color-scheme: dark;
-  }
-
-  *{box-sizing:border-box;}
-  html{margin:0;}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--ink);
-    font-family:'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
-    font-size:15.5px;
-    line-height:1.7;
-  }
-  main{ max-width:640px; margin:0 auto; padding:64px 20px 80px; }
-  a{ color:var(--accent); text-decoration:underline; text-underline-offset:2px; text-decoration-color:var(--line); }
-  a:hover{ text-decoration-color:var(--accent); }
-
-  header{ display:flex; align-items:center; gap:24px; margin-bottom:8px; }
-  .photos{ display:flex; gap:10px; flex:none; }
-  .avatar{
-    width:280px; height:330px; border-radius:6px;
-    object-fit:cover; flex:none;
-  }
-  .funny-end{
-    display:block; width:400px; height:400px border-radius:6px;
-    object-fit:cover; margin:56px 0 0;
-  }
-  h1{ font-size:1.35rem; font-weight:600; margin:0; }
-  .affiliation{ margin:6px 0 0; color:var(--ink-soft); font-size:0.92rem; }
-
-  .links{ margin:22px 0 0; font-size:0.9rem; }
-  .links a{ margin-right:16px; }
-
-  section{ margin-top:44px; }
-  h2{
-    font-size:0.82rem; font-weight:500;
-    color:var(--ink-soft);
-    margin:0 0 16px;
-  }
-  h2::before{ content:"# "; color:var(--line); }
-
-  .entry{ margin-bottom:16px; }
-  .entry:last-child{ margin-bottom:0; }
-  .entry-title{ font-size:0.95rem; }
-  .entry-title a{ color:var(--ink); }
-  .entry-title a:hover{ color:var(--accent); }
-  .entry-meta{ color:var(--ink-soft); font-size:0.82rem; margin-top:2px; }
-
-  @media (max-width:480px){
-    body{ font-size:14.5px; }
-    header{ gap:16px; flex-wrap:wrap; }
-    .avatar{ width:92px; height:92px; }
-  }
-
-  .theme-toggle{
-    position:fixed; top:20px; right:20px;
-    background:none; border:1px solid var(--line); border-radius:6px;
-    color:var(--ink-soft); font-family:inherit; font-size:0.78rem;
-    padding:5px 10px; cursor:pointer;
-  }
-  .theme-toggle:hover{ color:var(--ink); border-color:var(--ink-soft); }
-</style>
+    <style>
+        /* Minimalist text selection */
+        ::selection {
+            background-color: #e5e7eb;
+            color: #111111;
+        }
+        .dark ::selection {
+            background-color: #374151;
+            color: #f9fafb;
+        }
+        body {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+    </style>
 </head>
-<body>
-<button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">theme</button>
+<body class="bg-[#fafafa] text-gray-800 dark:bg-darkbg dark:text-gray-300 font-sans min-h-screen text-[15px] leading-relaxed">
 
-<main>
-  <header>
-    <img class="avatar" src="pic_LaFranca_b.jpeg" alt="Ivan La Franca">
-    <div>
-      <h1>Ivan La Franca</h1>
-      <p class="affiliation">PhD Candidate in Economics<br>UAB &amp; BSE</p>
-    </div>
-  </header>
-  <p class="links">
-    <a href="mailto:ivan.lafranca@bse.eu">ivan.lafranca@bse.eu</a><a href="CV_IvanLaFranca.pdf">cv</a><a href="https://www.linkedin.com/in/ivan-la-franca-a9841622a/">linkedin</a>
-  </p>
+    <!-- Minimal Dark Mode Toggle -->
+    <button id="themeToggle" class="fixed top-6 right-6 md:top-8 md:right-8 z-50 text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors focus:outline-none" aria-label="Toggle dark mode">
+        <span id="themeText">dark</span>
+    </button>
 
-  <section id="education">
-    <h2>education</h2>
-    <div class="entry">
-      <p class="entry-title">PhD in Economics</p>
-      <p class="entry-meta"> Universitat Aut&ograve;noma de Barcelona &amp; Barcelona School of Economics &middot; 2026 &ndash; present</p>
-    </div>
-    <div class="entry">
-      <p class="entry-title">MRes Economics</p>
-      <p class="entry-meta">Universitat Aut&ograve;noma de Barcelona &middot; 2023 &ndash; 2025</p>
-    </div>
-    <div class="entry">
-      <p class="entry-title">BA Economics and Management, <em>cum laude</em></p>
-      <p class="entry-meta">University of Milan &middot; 2020 &ndash; 2023</p>
-    </div>
-  </section>
+    <div class="max-w-5xl mx-auto px-6 py-16 md:py-24 lg:py-32 flex flex-col md:flex-row gap-12 lg:gap-24">
+        
+        <!-- Left Column: Profile (Sticky on Desktop) -->
+        <aside class="md:w-[280px] shrink-0 md:sticky md:top-32 h-fit">
+            <img 
+                src="pic_LaFranca_b.jpeg" 
+                alt="Ivan La Franca" 
+                onerror="this.onerror=null;this.src='https://placehold.co/400x500/e2e8f0/475569?text=Profile+Photo';"
+                class="w-40 md:w-48 h-auto object-cover rounded-md mb-8"
+            >
 
-  <section id="teaching">
-    <h2>teaching</h2>
-    <div class="entry">
-      <p class="entry-title">Macroeconomics III &mdash; Main Lecturer</p>
-      <p class="entry-meta">BA in Economics, UAB &middot; 2026</p>
-    </div>
-    <div class="entry">
-      <p class="entry-title">Advanced Macroeconomics &mdash; Teaching Assistant</p>
-      <p class="entry-meta">MRes in Economics, UAB &middot; 2026</p>
-    </div>
-    <div class="entry">
-      <p class="entry-title">Firm Dynamics &amp; Macro Labor &mdash; Teaching Assistant</p>
-      <p class="entry-meta">MRes in Economics, UAB &middot; 2026</p>
-    </div>
-    <div class="entry">
-      <p class="entry-title">Macroeconomics I &mdash; Teaching Assistant</p>
-      <p class="entry-meta">Master in Public Policy, BSE &middot; 2026</p>
-    </div>
-  </section>
+            <h1 class="text-2xl font-serif text-charcoal dark:text-gray-100 mb-1">Ivan La Franca</h1>
+            <p class="text-gray-500 dark:text-gray-400 mb-8 leading-snug">
+                PhD Candidate in Economics<br>
+                UAB &amp; BSE
+            </p>
 
-  <section id="experience">
-    <h2>work_experience</h2>
-    <div class="entry">
-      <p class="entry-title">Student Research Assistant, European Central Bank</p>
-      <p class="entry-meta">DG Research &ndash; Monetary Policy, Frankfurt Am Main &middot; 2025 &ndash; 2026</p>
-    </div>
-    <div class="entry">
-      <p class="entry-title">Research Assistant</p>
-      <p class="entry-meta">University of Milan &middot; 2022 &ndash; 2023</p>
-    </div>
-    <div class="entry">
-      <p class="entry-title">Research Assistant, lavoce.info</p>
-      <p class="entry-meta">Milan &middot; 2022 &ndash; 2023</p>
-    </div>
-  </section>
+            <!-- Minimal Links -->
+            <nav class="flex flex-col gap-3 text-[14px]">
+                <a href="mailto:ivan.lafranca@bse.eu" class="w-fit text-gray-600 dark:text-gray-300 hover:text-charcoal dark:hover:text-white underline decoration-gray-300 dark:decoration-gray-700 hover:decoration-gray-900 dark:hover:decoration-gray-100 underline-offset-4 transition-all">
+                    ivan.lafranca@bse.eu
+                </a>
+                <a href="CV_IvanLaFranca.pdf" class="w-fit text-gray-600 dark:text-gray-300 hover:text-charcoal dark:hover:text-white underline decoration-gray-300 dark:decoration-gray-700 hover:decoration-gray-900 dark:hover:decoration-gray-100 underline-offset-4 transition-all">
+                    CV
+                </a>
+                <a href="https://www.linkedin.com/in/ivan-la-franca-a9841622a/" target="_blank" rel="noopener noreferrer" class="w-fit text-gray-600 dark:text-gray-300 hover:text-charcoal dark:hover:text-white underline decoration-gray-300 dark:decoration-gray-700 hover:decoration-gray-900 dark:hover:decoration-gray-100 underline-offset-4 transition-all">
+                    LinkedIn
+                </a>
+            </nav>
+        </aside>
 
-  <img class="funny-end" src="pic_LaFranca_a.jpeg" alt="Ivan La Franca, candid">
-</main>
+        <!-- Right Column: Content Sections -->
+        <main class="md:flex-1 space-y-16">
+            
+            <!-- Education -->
+            <section id="education">
+                <h2 class="text-[1.1rem] font-serif text-charcoal dark:text-gray-200 mb-6 pb-2 border-b border-gray-200 dark:border-gray-800">Education</h2>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="font-medium text-charcoal dark:text-gray-200">PhD in Economics</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mt-0.5">Universitat Autònoma de Barcelona &amp; Barcelona School of Economics</p>
+                        <p class="text-[13px] text-gray-400 dark:text-gray-500 mt-1">2026 &ndash; present</p>
+                    </div>
 
-<script>
-  (function(){
-    var btn = document.getElementById('themeToggle');
-    var root = document.documentElement;
-    var stored = null;
-    try { stored = localStorage.getItem('theme'); } catch(e) {}
-    if (stored === 'light' || stored === 'dark') root.setAttribute('data-theme', stored);
+                    <div>
+                        <h3 class="font-medium text-charcoal dark:text-gray-200">MRes Economics</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mt-0.5">Universitat Autònoma de Barcelona</p>
+                        <p class="text-[13px] text-gray-400 dark:text-gray-500 mt-1">2023 &ndash; 2025</p>
+                    </div>
 
-    function current(){
-      var attr = root.getAttribute('data-theme');
-      if (attr) return attr;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    btn.addEventListener('click', function(){
-      var next = current() === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      try { localStorage.setItem('theme', next); } catch(e) {}
-    });
-  })();
-</script>
+                    <div>
+                        <h3 class="font-medium text-charcoal dark:text-gray-200">BA Economics and Management <span class="font-normal italic text-gray-500 dark:text-gray-400">, cum laude</span></h3>
+                        <p class="text-gray-600 dark:text-gray-400 mt-0.5">University of Milan</p>
+                        <p class="text-[13px] text-gray-400 dark:text-gray-500 mt-1">2020 &ndash; 2023</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Teaching -->
+            <section id="teaching">
+                <h2 class="text-[1.1rem] font-serif text-charcoal dark:text-gray-200 mb-6 pb-2 border-b border-gray-200 dark:border-gray-800">Teaching</h2>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="font-medium text-charcoal dark:text-gray-200">Macroeconomics III <span class="font-normal text-gray-500 dark:text-gray-400">&mdash; Main Lecturer</span></h3>
+                        <p class="text-gray-600 dark:text-gray-400 mt-0.5">BA in Economics, UAB</p>
+                        <p class="text-[13px] text-gray-400 dark:text-gray-500 mt-1">2026</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-medium text-charcoal dark:text-gray-200">Advanced Macroeconomics <span class="font-normal text-gray-500 dark:text-gray-400">&mdash; Teaching Assistant</span></h3>
+                        <p class="text-gray-600 dark:text-gray-400 mt-0.5">MRes in Economics, UAB</p>
+                        <p class="text-[13px] text-gray-400 dark:text-gray-500 mt-1">2026</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-medium text-charcoal dark:text-gray-200">Firm Dynamics &amp; Macro Labor <span class="font-normal text-gray-500 dark:text-gray-400">&mdash; Teaching Assistant</span></h3>
+                        <p class="text-gray-600 dark:text-gray-400 mt-0.5">MRes in Economics, UAB</p>
+                        <p class="text-[13px] text-gray-400 dark:text-gray-500 mt-1">2026</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-medium text-charcoal dark:text-gray-200">Macroeconomics I <span class="font-normal text-gray-500 dark:text-gray-400">&mdash; Teaching Assistant</span></h3>
+                        <p class="text-gray-600 dark:text-gray-400 mt-0.5">Master in Public Policy, BSE</p>
+                        <p class="text-[13px] text-gray-400 dark:text-gray-500 mt-1">2026</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Work Experience -->
+            <section id="experience">
+                <h2 class="text-[1.1rem] font-serif text-charcoal dark:text-gray-200 mb-6 pb-2 border-b border-gray-200 dark:border-gray-800">Work Experience</h2>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="font-medium text-charcoal dark:text-gray-200">Student Research Assistant, European Central Bank</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mt-0.5">DG Research &ndash; Monetary Policy, Frankfurt Am Main</p>
+                        <p class="text-[13px] text-gray-400 dark:text-gray-500 mt-1">2025 &ndash; 2026</p>
+                    </div>
+
+                    <div>
+                        <h3 class="font-medium text-charcoal dark:text-gray-200">Research Assistant</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mt-0.5">University of Milan</p>
+                        <p class="text-[13px] text-gray-400 dark:text-gray-500 mt-1">2022 &ndash; 2023</p>
+                    </div>
+
+                    <div>
+                        <h3 class="font-medium text-charcoal dark:text-gray-200">Research Assistant, lavoce.info</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mt-0.5">Milan</p>
+                        <p class="text-[13px] text-gray-400 dark:text-gray-500 mt-1">2022 &ndash; 2023</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bottom Candid Image -->
+            <section class="pt-16">
+                <img 
+                    src="pic_LaFranca_a.jpeg" 
+                    alt="Ivan La Franca, candid" 
+                    onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/475569?text=Candid+Photo';"
+                    class="w-full max-w-[320px] h-auto object-cover rounded-md opacity-90 hover:opacity-100 transition-opacity"
+                >
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        (function() {
+            const html = document.documentElement;
+            const themeToggle = document.getElementById('themeToggle');
+            const themeText = document.getElementById('themeText');
+
+            // Check for saved theme preference or use system preference
+            let currentTheme = localStorage.getItem('theme');
+            if (!currentTheme) {
+                currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            
+            // Apply initial theme
+            applyTheme(currentTheme);
+
+            function applyTheme(theme) {
+                if (theme === 'dark') {
+                    html.classList.add('dark');
+                    themeText.textContent = 'light';
+                } else {
+                    html.classList.remove('dark');
+                    themeText.textContent = 'dark';
+                }
+            }
+
+            // Toggle theme on button click
+            themeToggle.addEventListener('click', () => {
+                const newTheme = html.classList.contains('dark') ? 'light' : 'dark';
+                applyTheme(newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+        })();
+    </script>
 </body>
 </html>
